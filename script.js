@@ -26,6 +26,8 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword(passwordLength, includeUppercase, includeSymbols, includeNumbers);
   var passwordText = document.querySelector("password");
+
+  var passwordLength = 25;
   var includeUppercase = true;
   var includeNumbers = true;
   var includeSymbols = true;
