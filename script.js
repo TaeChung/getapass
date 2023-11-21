@@ -27,19 +27,20 @@ function writePassword() {
   var password = generatePassword(passwordLength, includeUppercase, includeSymbols, includeNumbers);
   var passwordText = document.querySelector("password");
 
-  var passwordLength = 25;
-  var includeUppercase = true;
-  var includeNumbers = true;
-  var includeSymbols = true;
+  const passwordLength = 25;
+  const includeUppercase = true;
+  const includeNumbers = true;
+  const includeSymbols = true;
 
   passwordText.value = password;
 
+}
+
+
+
+// const password = generatePassword(25,true, true, true);
+// console.log(password);
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-// const password = generatePassword(25,true, true, true);
-console.log(password);
-
-}
