@@ -14,7 +14,7 @@ function generatePassword (length, includeUppercase, includeNumbers, includeSymb
   let password = '';
 
   for (let i = 0; i < length; i++) {
-    const oneIndex = Math.floor(math.oneIndex() * availableCharsLength);
+    const oneIndex = Math.floor(Math.random() * availableCharsLength);
     password += availableChars.charAt(oneIndex);
   }
   return password;
