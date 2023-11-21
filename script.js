@@ -5,7 +5,9 @@ function generatePassword (length, includeUppercase, includeNumbers, includeSymb
   const numberChars = '0123456789';
   const symbolChars = '!@#$%^&*()_+{}|:"<>?~';
 
-  let availableChars = lowercaseChars;
+  // let availableChars = lowercaseChars;
+  let availableChars = '';
+  if (includeLowercase) availableChars += lowercaseChars;
   if (includeUppercase) availableChars += uppercaseChars;
   if (includeNumbers) availableChars += numberChars;
   if (includeSymbols) availableChars += symbolChars;
@@ -24,13 +26,14 @@ function generatePassword (length, includeUppercase, includeNumbers, includeSymb
 
 
 function writePassword() {
-  const passwordLength = document.getElementById('passwordInput').value;
+  const passwordLength = document.getElementById('length').value;
 
-  const includeUppercase = document.getElementById('includeUppercase').checked;
-  const includeNumbers = document.getElementById('includeNumbers').checked;
-  const includeSymbols = document.getElementById('includeSymbols').checked;
+  const includeLowercase = document.getElementById('lowercase').checked;
+  const includeUppercase = document.getElementById('uppercase').checked;
+  const includeNumbers = document.getElementById('numbers').checked;
+  const includeSymbols = document.getElementById('symbols').checked;
 
-  var password = generatePassword(passwordLength, includeUppercase, includeSymbols, includeNumbers);
+  var password = generatePassword(passwordLength, includeLowercase, includeUppercase, includeSymbols, includeNumbers);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
