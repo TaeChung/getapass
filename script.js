@@ -24,12 +24,11 @@ function generatePassword (length, includeUppercase, includeNumbers, includeSymb
 
 
 function writePassword() {
-  // console.log('Initializing JavaScript function...');
-  // writePassword(25);
-  const passwordLength = 25;
-  const includeUppercase = true;
-  const includeNumbers = true;
-  const includeSymbols = true;
+  const passwordLength = document.getElementById('passwordInput').value;
+
+  const includeUppercase = document.getElementById('includeUppercase').checked;
+  const includeNumbers = document.getElementById('includeNumbers').checked;
+  const includeSymbols = document.getElementById('includeSymbols').checked;
 
   var password = generatePassword(passwordLength, includeUppercase, includeSymbols, includeNumbers);
   var passwordText = document.querySelector("#password");
