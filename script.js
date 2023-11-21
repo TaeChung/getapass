@@ -1,5 +1,5 @@
 // Assignment code here
-function generatePassword (length, includeUppercase, includeNumbers, includeSymbols) {
+function generatePassword (length, includeLowercase, includeUppercase, includeNumbers, includeSymbols) {
   const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
   const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const numberChars = '0123456789';
@@ -33,7 +33,7 @@ function writePassword() {
   const includeNumbers = document.getElementById('numbers').checked;
   const includeSymbols = document.getElementById('symbols').checked;
 
-  var password = generatePassword(passwordLength, includeLowercase, includeUppercase, includeSymbols, includeNumbers);
+  var password = generatePassword(passwordLength, includeLowercase, includeUppercase, includeNumbers, includeSymbols);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
