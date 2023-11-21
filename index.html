@@ -15,8 +15,14 @@
       <div class="card">
         <div class="card-header">
           <h2>Password Customization</h2><br>
+          <h3>Your password should ideally be 8-128 characters 
+            long, and use numbers, symbols, lowercase letters, and uppercase letters</h3><br>
+            
           <label for="length">Password Length:</label>
           <input type="number" id="length" min="8" max="128" value="25"><br><br>
+
+          <label for="lowercase">Include Lowercase Letters</label>
+          <input type="checkbox" id="lowercase" checked><br><br>
 
           <label for="uppercase">Include Uppercase Letters:</label>
           <input type="checkbox" id="uppercase" checked><br><br>
@@ -38,7 +44,7 @@
         </div>
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
-          <input type="passwordInput" id="length, uppercase, numbers, symbols"><br>
+          <!-- <input type="passwordInput" id="length, ,lowercase, uppercase, numbers, symbols"><br> -->
 
 
         </div>
